@@ -18,7 +18,6 @@ Wi-Fi — [see why](#why-separation-is-not-on-the-phone).
 
 <p align="center">
   <img src="docs/04-back.png" alt="Back page: speaker grille, volume ring, spec plate" width="260">
-  <img src="docs/05-queue.png" alt="Queue page: separation engine and library" width="260">
   <img src="docs/06-recordings.png" alt="Recording slots and the eight effects" width="260">
 </p>
 <p align="center">
