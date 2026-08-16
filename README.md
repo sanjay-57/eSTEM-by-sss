@@ -7,12 +7,28 @@ settings are ordinary Material 3 screens. Separation runs off-device, on a machi
 Wi-Fi — [see why](#why-separation-is-not-on-the-phone).
 
 <p align="center">
-  <img src="docs/puck-front.png" alt="The puck, drawn from directly above" width="420">
+  <img src="docs/01-player.png" alt="The puck playing, four arms of LEDs lit" width="260">
+  <img src="docs/02-loops-speed.png" alt="Loops and speed menu" width="260">
+  <img src="docs/03-effects.png" alt="Effects menu" width="260">
+</p>
+<p align="center">
+  <em>Playing — each arm is a stem, lit by that stem's own signal&nbsp;&nbsp;·&nbsp;&nbsp;hold the
+  centre for loops &amp; speed&nbsp;&nbsp;·&nbsp;&nbsp;centre + volume-up for the effects rack</em>
+</p>
+
+<p align="center">
+  <img src="docs/04-back.png" alt="Back page: speaker grille, volume ring, spec plate" width="260">
+  <img src="docs/05-queue.png" alt="Queue page: separation engine and library" width="260">
+  <img src="docs/06-recordings.png" alt="Recording slots and the eight effects" width="260">
+</p>
+<p align="center">
+  <em>Back — volume ring and a live spec plate&nbsp;&nbsp;·&nbsp;&nbsp;Queue — engine, server and
+  library&nbsp;&nbsp;·&nbsp;&nbsp;four recording slots and the eight effects</em>
 </p>
 
 > Unaffiliated with Kanye West, Kano Computing or Stem Player. This is a personal reimplementation
 > for local audio files, not a product, and ships no copyrighted assets — the face is drawn in
-> code. Bring your own music.
+> code. Bring your own music; the tracks in the screenshots are the author's own library.
 
 ## Modules
 
