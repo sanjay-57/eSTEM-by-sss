@@ -1,0 +1,56 @@
+# Local machine configuration — contains absolute SDK paths
+local.properties
+
+# Personal scratch: device serial, home server address. See LOCAL_NOTES.md.
+LOCAL_NOTES.md
+
+# Gradle / Android build output
+.gradle/
+build/
+captures/
+*.iml
+.idea/
+.cxx/
+.externalNativeBuild/
+.kotlin/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Signing material — never commit these
+*.jks
+*.keystore
+keystore.properties
+*.pem
+*.p12
+*.key
+
+# Separation server
+server/.venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Job scratch: holds decoded PCM of whatever tracks were separated.
+# That is the user's own music — it must never leave the machine.
+server/jobs/
+
+# Audio, in any form. Nothing in this repo should carry a recording.
+*.pcm
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.aac
+*.ogg
+
+# Reference photographs of the hardware — third-party images, not ours to publish
+images.jpeg
+maxresdefault.jpg
+
+# Loose screenshots at the root. The ones the README uses live in docs/.
+/Screenshot*.png
+
+# macOS
+.DS_Store

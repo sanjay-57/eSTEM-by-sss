@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Estem" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!--
+            Matches the Compose stage colour. Without this the launch window flashes the platform
+            default before the first frame, which reads as a stutter on every cold start.
+        -->
+        <item name="android:windowBackground">@color/ic_launcher_background</item>
+    </style>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Phase 2: DualSense over Bluetooth arrives as a standard HID gamepad. -->
+    <uses-feature
+        android:name="android.hardware.gamepad"
+        android:required="false" />
+
+    <!--
+        The separation server is a machine on the same Wi-Fi, addressed by LAN IP. A certificate
+        for 192.168.x.x is not something you can get, so HTTPS is not on the table and cleartext
+        has to be permitted. A network-security-config would be narrower, but it can only name
+        fixed domains — and the whole point of the address being a setting is that it changes.
+    -->
+    <application
+        android:name=".EstemApplication"
+        android:usesCleartextTraffic="true"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Estem">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Estem">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            WorkManager declares this service without a foregroundServiceType, and the platform
+            rejects a ForegroundInfo whose type is not a subset of the manifest's. Separation runs
+            as dataSync, so the type has to be merged in here or the process dies the moment the
+            first separation starts.
+        -->
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:foregroundServiceType="dataSync"
+            tools:node="merge" />
+
+    </application>
+
+</manifest>

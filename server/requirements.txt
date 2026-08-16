@@ -1,0 +1,8 @@
+# Separation server. Torch is the big one — expect ~2 GB.
+#
+# Versions are the ones this was measured on; demucs pulls torch and torchaudio
+# itself, but pinning them keeps an MPS/CUDA build from being swapped underneath.
+demucs==4.0.1
+torch==2.8.0
+torchaudio==2.8.0
+numpy==2.0.2
